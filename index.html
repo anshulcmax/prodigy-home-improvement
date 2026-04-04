@@ -56,7 +56,7 @@ src="https://www.facebook.com/tr?id=896459406558741&ev=PageView&noscript=1"
 <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
 
 <!-- PRELOAD HERO IMAGE -->
-<link rel="preload" as="image" href="/exterior.jpg" />
+<link rel="preload" as="image" href="/hero.png" />
 
 <!-- LOCAL BUSINESS SCHEMA -->
 <script type="application/ld+json">
@@ -768,10 +768,10 @@ p { font-family: var(--font-p); }
       <div class="nav-item">
         <a href="#services" class="nav-link">Our Services <span class="nav-arrow">&#9660;</span></a>
         <div class="dropdown">
-          <a href="#services" onclick="bookService('interior-remodel');return false;">Interior Work</a>
-          <a href="#services" onclick="bookService('exterior-remodel');return false;">Exterior Work</a>
+          <a href="#services">Interior Work</a>
+          <a href="#services">Exterior Work</a>
           <a href="#services">Hauls Services</a>
-          <a href="#service-areas">Service Areas</a>
+          <a href="#services">Roofing Services</a>
         </div>
       </div>
 
@@ -806,8 +806,8 @@ p { font-family: var(--font-p); }
   <button class="mobile-nav-close" id="mob-close" aria-label="Close navigation"><i data-lucide="x"></i></button>
   <a href="#top">Home</a>
   <a href="#services">Our Services</a>
-  <a href="#services" onclick="bookService('interior-remodel')">&#8194; Interior Work</a>
-  <a href="#services" onclick="bookService('exterior-remodel')">&#8194; Exterior Work</a>
+  <a href="#services">&#8194; Interior Work</a>
+  <a href="#services">&#8194; Exterior Work</a>
   <a href="#services">&#8194; Hauls Services</a>
   <a href="#testimonials">Testimonials</a>
   <a href="#service-areas">Service Areas</a>
@@ -932,7 +932,7 @@ p { font-family: var(--font-p); }
     <div class="services-row-top">
       <div class="svc-card fi">
         <div class="svc-img">
-          <img src="/exterior.jpg"
+          <img src="/hero.png"
                alt="Aerial drone view of completed roof replacement in Cumming GA by Prodigy Home Improvement"
                loading="lazy" width="400" height="195" />
           <div class="svc-img-overlay"></div>
