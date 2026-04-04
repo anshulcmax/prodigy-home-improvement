@@ -1073,6 +1073,10 @@ mobNav.querySelectorAll('a').forEach(a => a.addEventListener('click', closeNav))
 const PARTIAL_FILL_URL = 'https://services.leadconnectorhq.com/hooks/kXQuV9NX2dbJg3UJFLzr/webhook-trigger/c3588964-388a-4041-9489-06ee720c407c';
 const FULL_LEAD_URL    = 'https://services.leadconnectorhq.com/hooks/kXQuV9NX2dbJg3UJFLzr/webhook-trigger/76da1284-2e8a-451b-b6dd-fe8f6859ed67';
 
+const fbclid = new URLSearchParams(window.location.search).get('fbclid') || '';
+const fbc    = (document.cookie.match(/(?:^|;\s*)_fbc=([^;]*)/) || [])[1] || '';
+const fbp    = (document.cookie.match(/(?:^|;\s*)_fbp=([^;]*)/) || [])[1] || '';
+
 function sendPartialFill(data) {
   try {
     fetch(PARTIAL_FILL_URL, {
@@ -1245,7 +1249,10 @@ function submitContactInfo() {
     address:   formData.address,
     city:      formData.city,
     state:     formData.state,
-    zip:       formData.zip
+    zip:       formData.zip,
+    fbclid,
+    fbc,
+    fbp
   });
 
   goToStep(2);
@@ -1284,7 +1291,10 @@ function selectOption(el, field, value) {
           service:   isResidential ? formData.service : '',
           role:      isResidential ? '' : formData.role,
           budget:    formData.budget,
-          timeline:  formData.timeline
+          timeline:  formData.timeline,
+          fbclid,
+          fbc,
+          fbp
         });
         goToStep('thanks');
       }
