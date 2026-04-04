@@ -30,6 +30,23 @@
 <meta name="twitter:title" content="Roofing Contractor in Cumming, GA | Prodigy Home Improvement" />
 <meta name="twitter:description" content="GAF Certified roofing contractor serving Cumming, GA and North Metro Atlanta. Expert roof replacement, storm damage repair, and home improvement." />
 
+<!-- FACEBOOK PIXEL -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '896459406558741');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=896459406558741&ev=PageView&noscript=1"
+/></noscript>
+
 <!-- GOOGLE FONTS -->
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -561,7 +578,8 @@ p { font-family: var(--font-p); }
    CONTACT
 ============================================================ */
 #contact { padding: 96px 0; background: var(--bg-light); }
-.contact-layout { display: grid; grid-template-columns: 1fr 1.6fr; gap: 60px; align-items: start; }
+#quote { padding: 96px 0; background: var(--bg-light); }
+.contact-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
 .contact-desc { font-size: 0.94rem; color: var(--gray); line-height: 1.72; margin-bottom: 32px; }
 .contact-items { display: flex; flex-direction: column; gap: 18px; margin-bottom: 30px; }
 .c-item { display: flex; align-items: flex-start; gap: 14px; }
@@ -729,7 +747,7 @@ p { font-family: var(--font-p); }
         <span class="top-bar-hours">Mon&#8211;Sun &nbsp;7:00 AM &#8211; 8:00 PM</span>
       </div>
       <div class="top-bar-right">
-        <a href="#quote" class="btn btn-primary" style="padding:6px 16px;font-size:0.76rem;">GET A FREE INSPECTION</a>
+        <a href="quote.html" class="btn btn-primary" style="padding:6px 16px;font-size:0.76rem;">GET A FREE INSPECTION</a>
       </div>
     </div>
   </div>
@@ -773,8 +791,8 @@ p { font-family: var(--font-p); }
       </div>
 
       <div class="nav-item"><a href="#about" class="nav-link">About Us</a></div>
-      <div class="nav-item"><a href="#quote" class="nav-link">Contact Us</a></div>
-      <div class="nav-item nav-cta"><a href="#quote" class="btn btn-primary">GET A QUOTE</a></div>
+      <div class="nav-item"><a href="quote.html" class="nav-link">Contact Us</a></div>
+      <div class="nav-item nav-cta"><a href="quote.html" class="btn btn-primary">GET A QUOTE</a></div>
     </nav>
 
     <button class="hamburger" id="ham-btn" aria-label="Open navigation" aria-expanded="false">
@@ -801,9 +819,9 @@ p { font-family: var(--font-p); }
   <a href="dawsonville-ga.html">&#8194; Dawsonville, GA</a>
   <a href="buford-ga.html">&#8194; Buford, GA</a>
   <a href="#about">About Us</a>
-  <a href="#quote">Contact Us</a>
+  <a href="quote.html">Contact Us</a>
   <div class="divider"></div>
-  <a href="#quote" class="btn btn-primary">Get a Free Quote</a>
+  <a href="quote.html" class="btn btn-primary">Get a Free Quote</a>
   <a href="tel:6788006687" class="btn btn-secondary">Call (678)-800-6687</a>
 </div>
 
@@ -822,11 +840,11 @@ p { font-family: var(--font-p); }
 
       <p class="hero-sub">
         <strong>GAF Certified. Licensed &amp; Insured. Owner-Supervised on Every Job.</strong><br>
-        Serving Cumming, GA and North Metro Atlanta with expert roof replacement, storm damage repair, and full-service home improvement. <a href="#quote" style="color:var(--gold);font-weight:600;">Get your free inspection today.</a>
+        Serving Cumming, GA and North Metro Atlanta with expert roof replacement, storm damage repair, and full-service home improvement. <a href="quote.html" style="color:var(--gold);font-weight:600;">Get your free inspection today.</a>
       </p>
 
       <div class="hero-btns">
-        <a href="#quote" class="btn btn-primary"><i data-lucide="search"></i> Get a Free Inspection</a>
+        <a href="quote.html" class="btn btn-primary"><i data-lucide="search"></i> Get a Free Inspection</a>
         <a href="tel:6788006687" class="btn btn-secondary"><i data-lucide="phone"></i> Call (678)-800-6687</a>
       </div>
 
@@ -890,7 +908,7 @@ p { font-family: var(--font-p); }
 
         <div class="about-actions">
           <a href="#about" class="btn btn-primary">Read More About Us</a>
-          <a href="#quote" class="btn btn-outline-gold">Get a Free Estimate</a>
+          <a href="quote.html" class="btn btn-outline-gold">Get a Free Estimate</a>
         </div>
       </div>
     </div>
@@ -922,7 +940,7 @@ p { font-family: var(--font-p); }
         <div class="svc-body">
           <h3 class="svc-title">Roofing Services</h3>
           <p class="svc-desc">Expert roof replacement, roof repair, and storm damage restoration. As GAF Certified contractors, we install roofing systems backed by industry-leading manufacturer warranties. Services include asphalt shingle installation, leak repair, gutter installation, and comprehensive roof inspection.</p>
-          <a href="#quote" onclick="bookService('roofing')" class="svc-link">Book Now <i data-lucide="arrow-right"></i></a>
+          <a href="quote.html" onclick="bookService('roofing')" class="svc-link">Book Now <i data-lucide="arrow-right"></i></a>
         </div>
       </div>
 
@@ -936,7 +954,7 @@ p { font-family: var(--font-p); }
         <div class="svc-body">
           <h3 class="svc-title">Storm Damage &amp; Insurance Claims</h3>
           <p class="svc-desc">Rapid response for hail damage and wind damage across Forsyth County. We document all damage thoroughly and guide homeowners through the insurance claim process  from initial inspection to project completion and final sign-off.</p>
-          <a href="#quote" onclick="bookService('storm-damage')" class="svc-link">Book Now <i data-lucide="arrow-right"></i></a>
+          <a href="quote.html" onclick="bookService('storm-damage')" class="svc-link">Book Now <i data-lucide="arrow-right"></i></a>
         </div>
       </div>
 
@@ -950,7 +968,7 @@ p { font-family: var(--font-p); }
         <div class="svc-body">
           <h3 class="svc-title">Exterior Work</h3>
           <p class="svc-desc">Complete exterior home improvement including siding installation, exterior painting, soffit &amp; fascia repair, and gutter replacement. We protect and enhance your home&#8217;s curb appeal and weather resistance.</p>
-          <a href="#quote" onclick="bookService('exterior-remodel')" class="svc-link">Book Now <i data-lucide="arrow-right"></i></a>
+          <a href="quote.html" onclick="bookService('exterior-remodel')" class="svc-link">Book Now <i data-lucide="arrow-right"></i></a>
         </div>
       </div>
     </div>
@@ -967,7 +985,7 @@ p { font-family: var(--font-p); }
         <div class="svc-body">
           <h3 class="svc-title">Interior Work</h3>
           <p class="svc-desc">Kitchen remodeling, bathroom renovations, interior painting, and full-room remodels. We manage interior projects end to end, eliminating the hassle of coordinating multiple contractors.</p>
-          <a href="#quote" onclick="bookService('interior-remodel')" class="svc-link">Book Now <i data-lucide="arrow-right"></i></a>
+          <a href="quote.html" onclick="bookService('interior-remodel')" class="svc-link">Book Now <i data-lucide="arrow-right"></i></a>
         </div>
       </div>
 
@@ -981,7 +999,7 @@ p { font-family: var(--font-p); }
         <div class="svc-body">
           <h3 class="svc-title">Hauls Services</h3>
           <p class="svc-desc">Cost-effective dump trailer service for construction debris, yard waste, and large-volume material removal. A practical solution for renovation projects and ongoing property maintenance for homeowners and property managers.</p>
-          <a href="#quote" onclick="bookService('hauls')" class="svc-link">Book Now <i data-lucide="arrow-right"></i></a>
+          <a href="quote.html" onclick="bookService('hauls')" class="svc-link">Book Now <i data-lucide="arrow-right"></i></a>
         </div>
       </div>
     </div>
@@ -1000,7 +1018,7 @@ p { font-family: var(--font-p); }
       </div>
       <div class="cta-btns">
         <a href="tel:6788006687" class="btn btn-white"><i data-lucide="phone"></i> Call Today  (678)-800-6687</a>
-        <a href="#quote" class="btn btn-outline-white">Get a Free Quote</a>
+        <a href="quote.html" class="btn btn-outline-white">Get a Free Quote</a>
       </div>
     </div>
   </div>
@@ -1263,7 +1281,7 @@ p { font-family: var(--font-p); }
         <span class="section-label">Common Questions</span>
         <h2 id="faq-h2" class="section-title">Frequently Asked <span>Questions</span></h2>
         <p>Have questions about your roof or a home improvement project? We&#8217;re always happy to help. Browse below or call us at <a href="tel:6788006687">(678)-800-6687</a>.</p>
-        <a href="#quote" class="btn btn-primary">Get a Free Estimate</a>
+        <a href="quote.html" class="btn btn-primary">Get a Free Estimate</a>
       </div>
 
       <div class="faq-list fi">
@@ -1344,59 +1362,8 @@ p { font-family: var(--font-p); }
         </div>
       </div>
 
-      <div class="form-wrap fi">
-        <h3 class="form-title-h">Get a Free Quote</h3>
-        <p class="form-sub-h">Fill out the form and we&#8217;ll be in touch within one business day.</p>
-
-        <form id="quote-form" action="/get-a-quote/" method="post" novalidate>
-          <div class="form-row">
-            <div class="form-group">
-              <label for="full-name">Full Name *</label>
-              <input type="text" id="full-name" name="full_name" placeholder="John Smith" required autocomplete="name" />
-            </div>
-            <div class="form-group">
-              <label for="phone">Phone Number *</label>
-              <input type="tel" id="phone" name="phone" placeholder="(678) 000-0000" required autocomplete="tel" />
-            </div>
-          </div>
-          <div class="form-row">
-            <div class="form-group">
-              <label for="email">Email Address *</label>
-              <input type="email" id="email" name="email" placeholder="john@example.com" required autocomplete="email" />
-            </div>
-            <div class="form-group">
-              <label for="address">Property Address</label>
-              <input type="text" id="address" name="address" placeholder="123 Main St, Cumming, GA" autocomplete="street-address" />
-            </div>
-          </div>
-          <div class="form-group">
-            <label for="project-type">Project Type *</label>
-            <div class="sel-wrap">
-              <select id="project-type" name="project_type" required>
-                <option value="" disabled selected>Select a service&#8230;</option>
-                <option value="roofing">Roofing (Replacement / Repair)</option>
-                <option value="storm-damage">Storm Damage / Insurance Claim</option>
-                <option value="siding">Siding</option>
-                <option value="painting">Painting (Exterior / Interior)</option>
-                <option value="electrical">Electrical</option>
-                <option value="deck">Deck Install / Repair</option>
-                <option value="bathroom">Bathroom Renovation / Addition</option>
-                <option value="interior-remodel">Interior Remodeling</option>
-                <option value="exterior-remodel">Exterior Remodeling</option>
-                <option value="hauls">Hauls / Debris Removal</option>
-                <option value="other">Other</option>
-              </select>
-            </div>
-          </div>
-          <div class="form-group">
-            <label for="message">Message / Project Details</label>
-            <textarea id="message" name="message" placeholder="Tell us about your project&#8230;" rows="4"></textarea>
-          </div>
-          <div class="form-consent">
-            By submitting this form, you consent to be contacted by Prodigy Home Improvement LLC via phone, email, or SMS regarding your inquiry. Standard message and data rates may apply. Some calls may be recorded through our Ooma system for quality assurance. No mobile information will be shared with third parties for marketing purposes. Reply STOP to opt out.
-          </div>
-          <button type="submit" class="btn btn-primary form-submit">Submit Request  Get My Free Estimate</button>
-        </form>
+      <div class="fi" style="display:flex;align-items:center;justify-content:center;">
+        <a href="quote.html" class="btn btn-primary" style="padding:20px 48px;font-size:1.1rem;font-weight:700;letter-spacing:1px;">Request Your Free Inspection</a>
       </div>
     </div>
   </div>
@@ -1431,8 +1398,8 @@ p { font-family: var(--font-p); }
             <a href="#services" onclick="bookService('exterior-remodel')">Exterior Work</a>
             <a href="#services" onclick="bookService('interior-remodel')">Interior Work</a>
             <a href="#testimonials">Testimonials</a>
-            <a href="#quote">Contact Us</a>
-            <a href="#quote">Get a Quote</a>
+            <a href="quote.html">Contact Us</a>
+            <a href="quote.html">Get a Quote</a>
           </div>
         </div>
 
@@ -1464,7 +1431,7 @@ p { font-family: var(--font-p); }
             <p>7:00 AM &#8211; 8:00 PM</p>
           </div>
           <div class="footer-cta">
-            <a href="#quote" class="btn btn-primary">GET A QUOTE</a>
+            <a href="quote.html" class="btn btn-primary">GET A QUOTE</a>
           </div>
         </div>
       </div>
@@ -1502,7 +1469,7 @@ p { font-family: var(--font-p); }
       <div class="footer-bot-inner">
         <p class="footer-copy">&#169; 2026 PRODIGY HOME IMPROVEMENT LLC  All rights reserved.</p>
         <div class="footer-bot-links">
-          <a href="#quote">Contact</a>
+          <a href="quote.html">Contact</a>
           <a href="#about">About</a>
           <a href="#testimonials">Reviews</a>
         </div>
@@ -1516,14 +1483,7 @@ p { font-family: var(--font-p); }
    BOOK SERVICE  pre-fill form & scroll to quote
 ============================================================ */
 function bookService(serviceType) {
-  const section = document.getElementById('quote');
-  const select  = document.getElementById('project-type');
-  if (select && serviceType) {
-    select.value = serviceType;
-    section.classList.add('highlight-flash');
-    setTimeout(() => section.classList.remove('highlight-flash'), 1500);
-  }
-  section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  window.location.href = 'quote.html';
 }
 
 /* ============================================================
@@ -1592,16 +1552,6 @@ const io = new IntersectionObserver((entries) => {
   });
 }, { threshold: 0.08, rootMargin: '0px 0px -30px 0px' });
 fiItems.forEach(el => io.observe(el));
-
-/* ============================================================
-   FORM SUBMIT (demo feedback only  WP handles real submit)
-============================================================ */
-document.getElementById('quote-form').addEventListener('submit', function(e) {
-  const btn = this.querySelector('.form-submit');
-  btn.textContent = 'Sending\u2026';
-  btn.disabled = true;
-  setTimeout(() => { btn.textContent = 'Submit Request \u2014 Get My Free Estimate'; btn.disabled = false; }, 2200);
-});
 
 /* Init Lucide icons */
 lucide.createIcons();

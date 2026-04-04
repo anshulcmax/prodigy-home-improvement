@@ -1,0 +1,1345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Get a Free Inspection | Prodigy Home Improvement</title>
+<meta name="description" content="Request your free roof inspection from Prodigy Home Improvement. GAF Certified roofing contractor serving Cumming, GA and North Metro Atlanta. Call (678)-800-6687." />
+<meta name="robots" content="index, follow" />
+<link rel="canonical" href="https://prodigyhomeimprovement.com/quote/" />
+
+<!-- FACEBOOK PIXEL -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '896459406558741');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=896459406558741&ev=PageView&noscript=1"
+/></noscript>
+
+<!-- GOOGLE FONTS -->
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Roboto:wght@300;400;500;700&family=Poppins:wght@300;400;500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+<!-- LUCIDE ICONS -->
+<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+
+<style>
+/* ============================================================
+   CSS VARIABLES
+============================================================ */
+:root {
+  --gold:       #B38600;
+  --gold-dark:  #8a6800;
+  --gold-light: #d4a017;
+  --gray:       #69727D;
+  --white:      #FFFFFF;
+  --black:      #000000;
+  --bg-light:   #f8f8f6;
+  --bg-dark:    #141414;
+  --font-h:     'Cinzel', serif;
+  --font-b:     'Roboto', sans-serif;
+  --font-p:     'Poppins', sans-serif;
+  --shadow-sm:  0 2px 8px rgba(0,0,0,0.08);
+  --shadow-md:  0 4px 20px rgba(0,0,0,0.13);
+  --shadow-lg:  0 8px 40px rgba(0,0,0,0.2);
+  --radius:     8px;
+  --ease:       all 0.3s ease;
+}
+
+/* ============================================================
+   RESET & BASE
+============================================================ */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { font-family: var(--font-b); color: var(--black); background: #0a0a0a; line-height: 1.6; overflow-x: hidden; }
+img { max-width: 100%; height: auto; display: block; }
+a { color: inherit; text-decoration: none; transition: var(--ease); }
+ul { list-style: none; }
+h1, h2, h3, h4 { font-family: var(--font-h); line-height: 1.2; }
+p { font-family: var(--font-p); }
+
+.container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+
+/* Buttons */
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+  padding: 13px 26px; border-radius: var(--radius);
+  font-family: var(--font-b); font-size: 0.9rem; font-weight: 600;
+  letter-spacing: 0.4px; cursor: pointer; transition: var(--ease);
+  border: 2px solid transparent; white-space: nowrap; text-decoration: none;
+}
+.btn-primary  { background: var(--gold); color: var(--white); border-color: var(--gold); }
+.btn-primary:hover { background: var(--gold-dark); border-color: var(--gold-dark); transform: translateY(-2px); box-shadow: var(--shadow-md); }
+.btn-secondary { background: transparent; color: var(--white); border-color: var(--white); }
+.btn-secondary:hover { background: var(--white); color: var(--black); }
+
+/* ============================================================
+   TOP BAR
+============================================================ */
+.top-bar {
+  background: var(--bg-dark);
+  color: var(--white);
+  padding: 8px 0;
+  font-size: 0.82rem;
+}
+.top-bar-inner { display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+.top-bar-left  { display: flex; align-items: center; gap: 18px; }
+.top-bar-left a { color: rgba(255,255,255,0.7); display: flex; align-items: center; gap: 5px; }
+.top-bar-left a:hover { color: var(--gold); }
+.top-bar-phone { font-weight: 700; font-size: 0.9rem; color: var(--white) !important; }
+.top-bar-hours { color: rgba(255,255,255,0.45); }
+
+/* ============================================================
+   STICKY HEADER
+============================================================ */
+#site-header {
+  position: sticky; top: 0; z-index: 900;
+  background: var(--white);
+  box-shadow: var(--shadow-sm);
+  transition: box-shadow 0.3s ease;
+}
+#site-header.scrolled { box-shadow: 0 4px 24px rgba(0,0,0,0.16); }
+
+.nav-inner {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 12px 24px; max-width: 1200px; margin: 0 auto;
+}
+.nav-logo img { height: 56px; width: auto; object-fit: contain; }
+
+/* Desktop Nav */
+.nav-menu { display: flex; align-items: center; gap: 2px; }
+.nav-item { position: relative; }
+.nav-link {
+  display: flex; align-items: center; gap: 4px;
+  padding: 8px 11px;
+  font-family: var(--font-b); font-size: 0.78rem; font-weight: 600;
+  letter-spacing: 0.4px; text-transform: uppercase;
+  color: var(--black); border-radius: 4px; transition: var(--ease); white-space: nowrap;
+}
+.nav-link:hover, .nav-link.active { color: var(--gold); }
+.nav-arrow { font-size: 0.55rem; transition: transform 0.2s; }
+.nav-item:hover .nav-arrow { transform: rotate(180deg); }
+
+/* Dropdown */
+.dropdown {
+  position: absolute; top: calc(100% + 4px); left: 0;
+  background: var(--white); min-width: 195px;
+  border-radius: var(--radius); box-shadow: var(--shadow-lg);
+  border-top: 3px solid var(--gold);
+  opacity: 0; visibility: hidden; transform: translateY(-8px);
+  transition: all 0.22s ease; z-index: 200;
+}
+.nav-item:hover .dropdown { opacity: 1; visibility: visible; transform: translateY(0); }
+.dropdown a {
+  display: block; padding: 10px 17px;
+  font-family: var(--font-b); font-size: 0.83rem; font-weight: 500;
+  color: var(--black); border-bottom: 1px solid #f2f2f2; transition: var(--ease);
+}
+.dropdown a:last-child { border-bottom: none; }
+.dropdown a:hover { background: #fdf8ee; color: var(--gold); padding-left: 22px; }
+
+.nav-cta { margin-left: 6px; }
+.nav-cta .btn { padding: 9px 18px; font-size: 0.78rem; }
+
+/* Hamburger */
+.hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 4px; background: none; border: none; }
+.hamburger span { display: block; width: 25px; height: 2px; background: var(--black); border-radius: 2px; transition: var(--ease); }
+.hamburger.open span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+.hamburger.open span:nth-child(2) { opacity: 0; }
+.hamburger.open span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+
+/* Mobile Nav Overlay */
+.mobile-nav {
+  display: none; position: fixed; inset: 0;
+  background: rgba(0,0,0,0.95); z-index: 999;
+  flex-direction: column; align-items: center; justify-content: center;
+  gap: 6px; padding: 40px 20px; overflow-y: auto;
+}
+.mobile-nav.open { display: flex; }
+.mobile-nav-close {
+  position: absolute; top: 18px; right: 22px;
+  background: none; border: none; color: var(--white); font-size: 1.8rem; cursor: pointer;
+}
+.mobile-nav a {
+  color: var(--white); font-family: var(--font-h);
+  font-size: 1.15rem; font-weight: 600; padding: 9px 20px;
+  text-align: center; transition: var(--ease); letter-spacing: 1px;
+}
+.mobile-nav a:hover { color: var(--gold); }
+.mobile-nav .divider { width: 40px; height: 1px; background: rgba(255,255,255,0.15); margin: 6px 0; }
+.mobile-nav .btn { margin-top: 10px; min-width: 220px; }
+
+/* ============================================================
+   MAIN CONTENT
+============================================================ */
+.quote-page-main {
+  min-height: calc(100vh - 110px);
+  background: #0a0a0a;
+  padding: 48px 20px 64px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+/* ============================================================
+   MULTI-STEP FORM
+============================================================ */
+.form-container {
+  width: 100%;
+  max-width: 520px;
+  background: #111;
+  border: 1px solid rgba(179, 134, 0, 0.3);
+  border-radius: 12px;
+  overflow: hidden;
+  font-family: 'Inter', sans-serif;
+}
+
+.form-header {
+  background: linear-gradient(135deg, #1a1a1a 0%, #111 100%);
+  padding: 28px 24px 20px;
+  text-align: center;
+  border-bottom: 2px solid #B38600;
+}
+
+.form-header h1 {
+  font-family: 'Cinzel', serif;
+  font-size: 22px;
+  color: #B38600;
+  letter-spacing: 1px;
+  margin-bottom: 6px;
+}
+
+.form-header p {
+  font-size: 13px;
+  color: rgba(255,255,255,0.6);
+  font-family: 'Inter', sans-serif;
+}
+
+.progress-bar {
+  display: flex;
+  gap: 4px;
+  padding: 16px 24px 0;
+}
+
+.progress-step {
+  flex: 1;
+  height: 4px;
+  background: rgba(255,255,255,0.1);
+  border-radius: 2px;
+  transition: background 0.4s ease;
+}
+
+.progress-step.active { background: #B38600; }
+.progress-step.completed { background: #B38600; }
+
+.step-indicator {
+  text-align: center;
+  padding: 12px 24px 0;
+  font-size: 12px;
+  color: rgba(255,255,255,0.4);
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-family: 'Inter', sans-serif;
+}
+
+.form-body { padding: 20px 24px 24px; }
+
+.step {
+  display: none;
+  animation: fadeIn 0.3s ease;
+}
+
+.step.active { display: block; }
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.step-question {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 6px;
+  color: #fff;
+  font-family: 'Inter', sans-serif;
+}
+
+.step-subtext {
+  font-size: 13px;
+  color: rgba(255,255,255,0.5);
+  margin-bottom: 20px;
+  font-family: 'Inter', sans-serif;
+}
+
+/* Option Cards */
+.options-grid { display: grid; gap: 10px; }
+.options-grid.two-col { grid-template-columns: 1fr 1fr; }
+
+.option-card {
+  background: rgba(255,255,255,0.04);
+  border: 1.5px solid rgba(255,255,255,0.1);
+  border-radius: 10px;
+  padding: 16px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-align: center;
+}
+
+.option-card:hover {
+  border-color: rgba(179, 134, 0, 0.5);
+  background: rgba(179, 134, 0, 0.05);
+}
+
+.option-card.selected {
+  border-color: #B38600;
+  background: rgba(179, 134, 0, 0.1);
+  box-shadow: 0 0 0 1px #B38600;
+}
+
+.option-card .option-label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #fff;
+  font-family: 'Inter', sans-serif;
+  display: block;
+}
+
+.option-card .option-sublabel {
+  font-size: 11px;
+  color: rgba(255,255,255,0.4);
+  margin-top: 2px;
+  display: block;
+  font-family: 'Inter', sans-serif;
+}
+
+/* Input Fields */
+.input-group { margin-bottom: 14px; }
+
+.input-group label {
+  display: block;
+  font-size: 12px;
+  font-weight: 600;
+  color: rgba(255,255,255,0.6);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 6px;
+  font-family: 'Inter', sans-serif;
+}
+
+.input-group input,
+.input-group textarea,
+.input-group select {
+  width: 100%;
+  padding: 12px 14px;
+  background: rgba(255,255,255,0.05);
+  border: 1.5px solid rgba(255,255,255,0.12);
+  border-radius: 8px;
+  color: #fff;
+  font-size: 15px;
+  font-family: 'Inter', sans-serif;
+  transition: border-color 0.2s;
+  outline: none;
+}
+
+.input-group input:focus,
+.input-group textarea:focus,
+.input-group select:focus {
+  border-color: #B38600;
+}
+
+.input-group input::placeholder,
+.input-group textarea::placeholder {
+  color: rgba(255,255,255,0.25);
+}
+
+.input-group input.error {
+  border-color: #e74c3c;
+}
+
+.input-group .error-msg {
+  font-size: 11px;
+  color: #e74c3c;
+  margin-top: 4px;
+  display: none;
+  font-family: 'Inter', sans-serif;
+}
+
+.input-group .error-msg.visible {
+  display: block;
+}
+
+.input-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.input-row.three-col {
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+/* Form Buttons */
+.btn-primary-form {
+  width: 100%;
+  padding: 16px;
+  background: #B38600;
+  color: #000;
+  font-size: 15px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s;
+  margin-top: 20px;
+  font-family: 'Inter', sans-serif;
+}
+
+.btn-primary-form:hover {
+  background: #c99700;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 15px rgba(179, 134, 0, 0.3);
+}
+
+.btn-back {
+  display: inline-block;
+  background: none;
+  border: none;
+  color: rgba(255,255,255,0.4);
+  font-size: 13px;
+  cursor: pointer;
+  padding: 8px 0;
+  margin-top: 10px;
+  font-family: 'Inter', sans-serif;
+}
+
+.btn-back:hover { color: rgba(255,255,255,0.7); }
+
+/* Consent */
+.consent-text {
+  font-size: 11px;
+  color: rgba(255,255,255,0.35);
+  line-height: 1.5;
+  margin-top: 16px;
+  padding: 12px;
+  background: rgba(179, 134, 0, 0.05);
+  border-left: 2px solid rgba(179, 134, 0, 0.3);
+  border-radius: 0 6px 6px 0;
+  font-family: 'Inter', sans-serif;
+}
+
+/* Trust Badges */
+.trust-badges {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  padding: 16px 24px;
+  border-top: 1px solid rgba(255,255,255,0.06);
+}
+
+.trust-badge-form {
+  font-size: 11px;
+  color: rgba(255,255,255,0.3);
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-family: 'Inter', sans-serif;
+}
+
+.trust-badge-form .badge-icon {
+  color: #B38600;
+  font-size: 13px;
+}
+
+/* Thank You */
+.thank-you {
+  text-align: center;
+  padding: 40px 24px;
+}
+
+.thank-you .check-icon {
+  width: 64px;
+  height: 64px;
+  background: rgba(179, 134, 0, 0.15);
+  border: 2px solid #B38600;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+  font-size: 28px;
+  color: #B38600;
+}
+
+.thank-you h2 {
+  font-family: 'Cinzel', serif;
+  font-size: 22px;
+  color: #B38600;
+  margin-bottom: 10px;
+}
+
+.thank-you p {
+  font-size: 14px;
+  color: rgba(255,255,255,0.6);
+  line-height: 1.6;
+  margin-bottom: 8px;
+  font-family: 'Inter', sans-serif;
+}
+
+.thank-you .phone-link {
+  display: inline-block;
+  margin-top: 16px;
+  padding: 12px 28px;
+  border: 1.5px solid #B38600;
+  border-radius: 8px;
+  color: #B38600;
+  font-weight: 600;
+  font-size: 15px;
+  text-decoration: none;
+  transition: all 0.2s;
+  font-family: 'Inter', sans-serif;
+}
+
+.thank-you .phone-link:hover {
+  background: rgba(179, 134, 0, 0.1);
+}
+
+/* ============================================================
+   FOOTER
+============================================================ */
+#footer { background: var(--bg-dark); color: var(--white); }
+.footer-main { padding: 68px 0 40px; }
+.footer-grid { display: grid; grid-template-columns: 1.7fr 1fr 1fr 1.35fr; gap: 44px; }
+.footer-logo-img { height: 56px; width: auto; object-fit: contain; margin-bottom: 14px; }
+.footer-tagline { font-size: 0.87rem; color: rgba(255,255,255,0.55); line-height: 1.7; margin-bottom: 18px; }
+.footer-social { display: flex; gap: 9px; }
+.footer-social a {
+  width: 34px; height: 34px; background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 50%; display: flex; align-items: center; justify-content: center;
+  font-size: 0.82rem; color: rgba(255,255,255,0.65); font-weight: 700; transition: var(--ease);
+}
+.footer-social a:hover { background: var(--gold); border-color: var(--gold); color: var(--white); }
+.footer-col h4 {
+  font-family: var(--font-h); font-size: 0.9rem; font-weight: 700; color: var(--white);
+  margin-bottom: 18px; padding-bottom: 8px; border-bottom: 2px solid var(--gold); display: inline-block;
+}
+.footer-links { display: flex; flex-direction: column; gap: 8px; }
+.footer-links a { font-size: 0.85rem; color: rgba(255,255,255,0.55); display: flex; align-items: center; gap: 5px; transition: var(--ease); }
+.footer-links a::before { content: '›'; color: var(--gold); font-size: 1rem; }
+.footer-links a:hover { color: var(--gold); padding-left: 4px; }
+.footer-c-items { display: flex; flex-direction: column; gap: 12px; }
+.footer-c-item { display: flex; align-items: flex-start; gap: 9px; font-size: 0.85rem; color: rgba(255,255,255,0.55); }
+.footer-c-item a { color: rgba(255,255,255,0.55); }
+.footer-c-item a:hover { color: var(--gold); }
+.footer-c-icon { color: var(--gold); flex-shrink: 0; margin-top: 2px; }
+.footer-hours { margin-top: 12px; padding: 10px; background: rgba(255,255,255,0.04); border-radius: 5px; border-left: 2px solid var(--gold); }
+.footer-hours strong { display: block; color: rgba(255,255,255,0.75); font-size: 0.82rem; margin-bottom: 2px; }
+.footer-hours p { font-size: 0.8rem; color: rgba(255,255,255,0.45); }
+.footer-cta { margin-top: 18px; }
+.footer-cta .btn { width: 100%; justify-content: center; }
+
+.footer-privacy { border-top: 1px solid rgba(255,255,255,0.07); padding: 28px 0; }
+.footer-privacy summary { font-size: 0.8rem; color: rgba(255,255,255,0.38); cursor: pointer; user-select: none; padding: 5px 0; }
+.footer-privacy summary:hover { color: rgba(255,255,255,0.6); }
+.priv-body { font-size: 0.76rem; color: rgba(255,255,255,0.32); line-height: 1.7; padding: 12px 0 4px; max-width: 900px; }
+.priv-h { font-weight: 700; color: rgba(255,255,255,0.38); font-size: 0.78rem; margin: 10px 0 3px; }
+
+.footer-bot { border-top: 1px solid rgba(255,255,255,0.07); padding: 18px 0; }
+.footer-bot-inner { display: flex; align-items: center; justify-content: space-between; gap: 14px; flex-wrap: wrap; }
+.footer-copy { font-size: 0.8rem; color: rgba(255,255,255,0.38); }
+.footer-bot-links { display: flex; gap: 18px; }
+.footer-bot-links a { font-size: 0.8rem; color: rgba(255,255,255,0.38); }
+.footer-bot-links a:hover { color: var(--gold); }
+
+/* ============================================================
+   LUCIDE ICONS
+============================================================ */
+.lucide { display: inline-block; vertical-align: middle; flex-shrink: 0; stroke-width: 1.75; }
+.btn .lucide { width: 16px; height: 16px; }
+.top-bar-left .lucide { width: 14px; height: 14px; }
+.footer-c-icon .lucide { width: 14px; height: 14px; }
+.footer-social a .lucide { width: 15px; height: 15px; }
+.mobile-nav-close .lucide { width: 22px; height: 22px; }
+
+/* ============================================================
+   RESPONSIVE
+============================================================ */
+@media (max-width: 1024px) {
+  .footer-grid { grid-template-columns: 1fr 1fr; gap: 34px; }
+}
+@media (max-width: 768px) {
+  .nav-menu { display: none; }
+  .hamburger { display: flex; }
+  .top-bar-hours { display: none; }
+  .footer-grid { grid-template-columns: 1fr; gap: 28px; }
+  .footer-bot-inner { flex-direction: column; text-align: center; }
+}
+@media (max-width: 480px) {
+  .options-grid.two-col { grid-template-columns: 1fr; }
+  .input-row { grid-template-columns: 1fr; }
+  .input-row.three-col { grid-template-columns: 1fr; }
+  .trust-badges { flex-direction: column; align-items: center; gap: 8px; }
+  .form-header h1 { font-size: 18px; }
+  .step-question { font-size: 16px; }
+  .top-bar-right { display: none; }
+}
+</style>
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="top-bar">
+  <div class="container">
+    <div class="top-bar-inner">
+      <div class="top-bar-left">
+        <a href="tel:6788006687" class="top-bar-phone"><i data-lucide="phone"></i> Call Now: (678)-800-6687</a>
+        <a href="mailto:prodigyhomeimprove@gmail.com"><i data-lucide="mail"></i> prodigyhomeimprove@gmail.com</a>
+        <span class="top-bar-hours">Mon&ndash;Sun &nbsp;7:00 AM &ndash; 8:00 PM</span>
+      </div>
+      <div class="top-bar-right">
+        <a href="index.html" class="btn btn-secondary" style="padding:6px 16px;font-size:0.76rem;">&#8592; Back to Main Site</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- STICKY HEADER -->
+<header id="site-header">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <img src="https://prodigyhomeimprovement.com/wp-content/uploads/2022/12/New-PHI-LOGO.jpeg"
+           alt="Prodigy Home Improvement logo - roofing contractor in Cumming GA"
+           width="180" height="56" />
+    </a>
+
+    <nav class="nav-menu" role="navigation" aria-label="Main navigation">
+      <div class="nav-item"><a href="index.html" class="nav-link">Home</a></div>
+
+      <div class="nav-item">
+        <a href="index.html#services" class="nav-link">Our Services <span class="nav-arrow">&#9660;</span></a>
+        <div class="dropdown">
+          <a href="index.html#services">Interior Work</a>
+          <a href="index.html#services">Exterior Work</a>
+          <a href="index.html#services">Hauls Services</a>
+          <a href="index.html#service-areas">Service Areas</a>
+        </div>
+      </div>
+
+      <div class="nav-item"><a href="index.html#testimonials" class="nav-link">Testimonials</a></div>
+
+      <div class="nav-item">
+        <a href="index.html#service-areas" class="nav-link">Service Areas <span class="nav-arrow">&#9660;</span></a>
+        <div class="dropdown">
+          <a href="cumming-ga.html">Cumming, GA</a>
+          <a href="sugar-hill-ga.html">Sugar Hill, GA</a>
+          <a href="suwanee-ga.html">Suwanee, GA</a>
+          <a href="alpharetta-ga.html">Alpharetta, GA</a>
+          <a href="johns-creek-ga.html">Johns Creek, GA</a>
+          <a href="dawsonville-ga.html">Dawsonville, GA</a>
+          <a href="buford-ga.html">Buford, GA</a>
+        </div>
+      </div>
+
+      <div class="nav-item"><a href="index.html#about" class="nav-link">About Us</a></div>
+      <div class="nav-item"><a href="index.html#quote" class="nav-link active">Contact Us</a></div>
+      <div class="nav-item nav-cta"><a href="quote.html" class="btn btn-primary">GET A QUOTE</a></div>
+    </nav>
+
+    <button class="hamburger" id="ham-btn" aria-label="Open navigation" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- MOBILE NAV -->
+<div class="mobile-nav" id="mob-nav" role="dialog" aria-modal="true" aria-label="Mobile navigation">
+  <button class="mobile-nav-close" id="mob-close" aria-label="Close navigation"><i data-lucide="x"></i></button>
+  <a href="index.html">Home</a>
+  <a href="index.html#services">Our Services</a>
+  <a href="index.html#services">&#8194; Interior Work</a>
+  <a href="index.html#services">&#8194; Exterior Work</a>
+  <a href="index.html#services">&#8194; Hauls Services</a>
+  <a href="index.html#testimonials">Testimonials</a>
+  <a href="index.html#service-areas">Service Areas</a>
+  <a href="cumming-ga.html">&#8194; Cumming, GA</a>
+  <a href="sugar-hill-ga.html">&#8194; Sugar Hill, GA</a>
+  <a href="suwanee-ga.html">&#8194; Suwanee, GA</a>
+  <a href="alpharetta-ga.html">&#8194; Alpharetta, GA</a>
+  <a href="johns-creek-ga.html">&#8194; Johns Creek, GA</a>
+  <a href="dawsonville-ga.html">&#8194; Dawsonville, GA</a>
+  <a href="buford-ga.html">&#8194; Buford, GA</a>
+  <a href="index.html#about">About Us</a>
+  <a href="index.html#quote">Contact Us</a>
+  <div class="divider"></div>
+  <a href="quote.html" class="btn btn-primary">Get a Free Quote</a>
+  <a href="tel:6788006687" class="btn btn-secondary">Call (678)-800-6687</a>
+</div>
+
+<!-- MAIN CONTENT -->
+<main class="quote-page-main">
+  <div class="form-container">
+    <div class="form-header">
+      <h1>Get Your Free Inspection</h1>
+      <p>Fill out the form and we'll be in touch within one business day</p>
+    </div>
+
+    <div class="progress-bar">
+      <div class="progress-step active" id="prog-1"></div>
+      <div class="progress-step" id="prog-2"></div>
+      <div class="progress-step" id="prog-3"></div>
+      <div class="progress-step" id="prog-4"></div>
+      <div class="progress-step" id="prog-5"></div>
+    </div>
+
+    <div class="step-indicator" id="step-indicator">Step 1 of 5</div>
+
+    <div class="form-body">
+
+      <!-- STEP 1: Contact Info -->
+      <div class="step active" id="step-1">
+        <p class="step-question">Let's start with your info</p>
+        <p class="step-subtext">So we know where to send your free estimate</p>
+
+        <div class="input-row">
+          <div class="input-group">
+            <label>First Name *</label>
+            <input type="text" id="firstName" placeholder="First name" autocomplete="given-name">
+            <div class="error-msg" id="err-firstName">Enter a valid first name</div>
+          </div>
+          <div class="input-group">
+            <label>Last Name *</label>
+            <input type="text" id="lastName" placeholder="Last name" autocomplete="family-name">
+            <div class="error-msg" id="err-lastName">Enter a valid last name</div>
+          </div>
+        </div>
+
+        <div class="input-row">
+          <div class="input-group">
+            <label>Phone *</label>
+            <input type="tel" id="phone" placeholder="(678) 000-0000" maxlength="14" autocomplete="tel">
+            <div class="error-msg" id="err-phone">Enter a valid 10-digit phone number</div>
+          </div>
+          <div class="input-group">
+            <label>Email *</label>
+            <input type="email" id="email" placeholder="you@email.com" autocomplete="email">
+            <div class="error-msg" id="err-email">Enter a valid email address</div>
+          </div>
+        </div>
+
+        <div class="input-group">
+          <label>Property Address *</label>
+          <input type="text" id="address" placeholder="123 Main St" autocomplete="street-address">
+          <div class="error-msg" id="err-address">Enter a valid street address</div>
+        </div>
+
+        <div class="input-row three-col">
+          <div class="input-group">
+            <label>City *</label>
+            <input type="text" id="city" placeholder="City" autocomplete="address-level2">
+            <div class="error-msg" id="err-city">Enter a valid city</div>
+          </div>
+          <div class="input-group">
+            <label>State</label>
+            <input type="text" id="state" value="GA" maxlength="2" style="text-transform: uppercase;" autocomplete="address-level1">
+          </div>
+          <div class="input-group">
+            <label>Zip *</label>
+            <input type="text" id="zip" placeholder="30040" maxlength="5" autocomplete="postal-code">
+            <div class="error-msg" id="err-zip">Enter a valid 5-digit zip code</div>
+          </div>
+        </div>
+
+        <div class="consent-text">
+          By submitting this form, you consent to be contacted by Prodigy Home Improvement LLC via phone, email, or SMS regarding your inquiry. Standard message and data rates may apply. Some calls may be recorded through our Ooma system for quality assurance. No mobile information will be shared with third parties for marketing purposes. Reply STOP to opt out.
+        </div>
+
+        <button class="btn-primary-form" onclick="submitContactInfo()">Continue</button>
+      </div>
+
+      <!-- STEP 2: Homeowner? -->
+      <div class="step" id="step-2">
+        <p class="step-question">Do you own a home in North Metro Atlanta?</p>
+        <p class="step-subtext">This helps us serve you better</p>
+        <div class="options-grid two-col">
+          <div class="option-card" onclick="selectOption(this, 'homeowner', 'Yes')" data-auto="true">
+            <span class="option-label">Yes, I'm a homeowner</span>
+          </div>
+          <div class="option-card" onclick="selectOption(this, 'homeowner', 'No')" data-auto="true">
+            <span class="option-label">No, I am not a homeowner</span>
+          </div>
+        </div>
+        <button class="btn-back" onclick="goBack()">Back</button>
+      </div>
+
+      <!-- STEP 3A: Residential Service Type -->
+      <div class="step" id="step-3a">
+        <p class="step-question">What do you need help with?</p>
+        <p class="step-subtext">Select the option that best fits your project</p>
+        <div class="options-grid two-col">
+          <div class="option-card" onclick="selectOption(this, 'service', 'Roof repair or replacement')" data-auto="true">
+            <span class="option-label">Roofing</span>
+            <span class="option-sublabel">Repair or replacement</span>
+          </div>
+          <div class="option-card" onclick="selectOption(this, 'service', 'Kitchen or bathroom remodel')" data-auto="true">
+            <span class="option-label">Kitchen / Bath</span>
+            <span class="option-sublabel">Remodel</span>
+          </div>
+          <div class="option-card" onclick="selectOption(this, 'service', 'Exterior improvements (siding, gutters, painting)')" data-auto="true">
+            <span class="option-label">Exterior</span>
+            <span class="option-sublabel">Siding, gutters, paint</span>
+          </div>
+          <div class="option-card" onclick="selectOption(this, 'service', 'Home addition or expansion')" data-auto="true">
+            <span class="option-label">Addition</span>
+            <span class="option-sublabel">Home expansion</span>
+          </div>
+          <div class="option-card" onclick="selectOption(this, 'service', 'Landscaping and outdoor spaces')" data-auto="true">
+            <span class="option-label">Landscaping</span>
+            <span class="option-sublabel">Outdoor spaces</span>
+          </div>
+          <div class="option-card" onclick="selectOption(this, 'service', 'Multiple projects')" data-auto="true">
+            <span class="option-label">Multiple Projects</span>
+            <span class="option-sublabel">Several services needed</span>
+          </div>
+        </div>
+        <button class="btn-back" onclick="goBack()">Back</button>
+      </div>
+
+      <!-- STEP 3B: Commercial Role -->
+      <div class="step" id="step-3b">
+        <p class="step-question">What best describes your role?</p>
+        <p class="step-subtext">This helps us tailor our approach</p>
+        <div class="options-grid two-col">
+          <div class="option-card" onclick="selectOption(this, 'role', 'I\'m a property manager')" data-auto="true">
+            <span class="option-label">Property Manager</span>
+          </div>
+          <div class="option-card" onclick="selectOption(this, 'role', 'I\'m a real estate investor')" data-auto="true">
+            <span class="option-label">Real Estate Investor</span>
+          </div>
+          <div class="option-card" onclick="selectOption(this, 'role', 'I\'m contacting you about a commercial property')" data-auto="true">
+            <span class="option-label">Commercial Property</span>
+          </div>
+          <div class="option-card" onclick="selectOption(this, 'role', 'I\'m helping a homeowner / family member')" data-auto="true">
+            <span class="option-label">Helping a Homeowner</span>
+            <span class="option-sublabel">Family member or friend</span>
+          </div>
+        </div>
+        <button class="btn-back" onclick="goBack()">Back</button>
+      </div>
+
+      <!-- STEP 4: Budget -->
+      <div class="step" id="step-4">
+        <p class="step-question">What's your budget range?</p>
+        <p class="step-subtext">This helps us recommend the right options</p>
+        <div class="options-grid" id="budget-residential" style="display:none;">
+          <div class="option-card" onclick="selectOption(this, 'budget', 'Under $5,000')" data-auto="true">
+            <span class="option-label">Under $5,000</span>
+          </div>
+          <div class="option-card" onclick="selectOption(this, 'budget', '$5,000 - $15,000')" data-auto="true">
+            <span class="option-label">$5,000 &ndash; $15,000</span>
+          </div>
+          <div class="option-card" onclick="selectOption(this, 'budget', '$15,000 - $50,000')" data-auto="true">
+            <span class="option-label">$15,000 &ndash; $50,000</span>
+          </div>
+          <div class="option-card" onclick="selectOption(this, 'budget', 'Over $50,000')" data-auto="true">
+            <span class="option-label">Over $50,000</span>
+          </div>
+        </div>
+        <div class="options-grid" id="budget-commercial" style="display:none;">
+          <div class="option-card" onclick="selectOption(this, 'budget', 'Under $15,000')" data-auto="true">
+            <span class="option-label">Under $15,000</span>
+          </div>
+          <div class="option-card" onclick="selectOption(this, 'budget', '$15,000-$50,000')" data-auto="true">
+            <span class="option-label">$15,000 &ndash; $50,000</span>
+          </div>
+          <div class="option-card" onclick="selectOption(this, 'budget', '$50,000-$150,000')" data-auto="true">
+            <span class="option-label">$50,000 &ndash; $150,000</span>
+          </div>
+          <div class="option-card" onclick="selectOption(this, 'budget', 'Over $150,000')" data-auto="true">
+            <span class="option-label">Over $150,000</span>
+          </div>
+        </div>
+        <button class="btn-back" onclick="goBack()">Back</button>
+      </div>
+
+      <!-- STEP 5: Timeline -->
+      <div class="step" id="step-5">
+        <p class="step-question">When do you need this done?</p>
+        <p class="step-subtext">No wrong answer &mdash; we work with every timeline</p>
+        <div class="options-grid two-col">
+          <div class="option-card" onclick="selectOption(this, 'timeline', 'ASAP / Emergency')" data-auto="true">
+            <span class="option-label">ASAP / Emergency</span>
+          </div>
+          <div class="option-card" onclick="selectOption(this, 'timeline', 'Within 30 Days')" data-auto="true">
+            <span class="option-label">Within 30 Days</span>
+          </div>
+          <div class="option-card" onclick="selectOption(this, 'timeline', 'Within 2-3 Months')" data-auto="true">
+            <span class="option-label">Within 2&ndash;3 Months</span>
+          </div>
+          <div class="option-card" onclick="selectOption(this, 'timeline', 'Just Getting Quotes')" data-auto="true">
+            <span class="option-label">Just Getting Quotes</span>
+          </div>
+        </div>
+        <button class="btn-back" onclick="goBack()">Back</button>
+      </div>
+
+      <!-- THANK YOU -->
+      <div class="step" id="step-thanks">
+        <div class="thank-you">
+          <div class="check-icon">&#10003;</div>
+          <h2>You're All Set!</h2>
+          <p>A member of our team will reach out within one business day to schedule your free roof inspection.</p>
+          <p style="color: rgba(255,255,255,0.4); font-size: 12px; margin-top: 12px;">Don't want to wait?</p>
+          <a href="tel:6788006687" class="phone-link">Call (678) 800-6687</a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="trust-badges" id="trust-badges">
+      <div class="trust-badge-form"><span class="badge-icon">&#10022;</span> GAF Certified</div>
+      <div class="trust-badge-form"><span class="badge-icon">&#10022;</span> Licensed &amp; Insured</div>
+      <div class="trust-badge-form"><span class="badge-icon">&#10022;</span> Family Owned</div>
+    </div>
+  </div>
+</main>
+
+<!-- FOOTER -->
+<footer id="footer" role="contentinfo">
+  <div class="footer-main">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Brand -->
+        <div>
+          <img src="https://prodigyhomeimprovement.com/wp-content/uploads/2022/12/New-PHI-LOGO.jpeg"
+               alt="Prodigy Home Improvement logo" class="footer-logo-img" loading="lazy" width="180" height="56" />
+          <p class="footer-tagline">GAF Certified roofing contractor and home improvement company serving Cumming, GA and North Metro Atlanta. Let&#8217;s build something better, together.</p>
+          <div class="footer-social">
+            <a href="https://www.facebook.com/people/Prodigy-Home-Improvement-LLC/100087435997039/" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+            <a href="https://twitter.com/prodigyimprove" target="_blank" rel="noopener noreferrer" aria-label="Twitter/X"><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.73-8.835L2.25 2.25h6.925l4.254 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+            <a href="https://www.instagram.com/prodigyhomeimprovement/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+          </div>
+        </div>
+
+        <!-- Useful Links -->
+        <div class="footer-col">
+          <h4>Useful Links</h4>
+          <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="index.html#about">About Us</a>
+            <a href="index.html#services">Our Services</a>
+            <a href="index.html#testimonials">Testimonials</a>
+            <a href="index.html#quote">Contact Us</a>
+            <a href="quote.html">Get a Quote</a>
+          </div>
+        </div>
+
+        <!-- Service Areas -->
+        <div class="footer-col">
+          <h4>Service Areas</h4>
+          <div class="footer-links">
+            <a href="cumming-ga.html">Cumming, GA</a>
+            <a href="sugar-hill-ga.html">Sugar Hill, GA</a>
+            <a href="suwanee-ga.html">Suwanee, GA</a>
+            <a href="alpharetta-ga.html">Alpharetta, GA</a>
+            <a href="johns-creek-ga.html">Johns Creek, GA</a>
+            <a href="dawsonville-ga.html">Dawsonville, GA</a>
+            <a href="buford-ga.html">Buford, GA</a>
+          </div>
+        </div>
+
+        <!-- Contact -->
+        <div class="footer-col">
+          <h4>Contact Info</h4>
+          <div class="footer-c-items">
+            <div class="footer-c-item"><span class="footer-c-icon"><i data-lucide="mail"></i></span><a href="mailto:prodigyhomeimprove@gmail.com">prodigyhomeimprove@gmail.com</a></div>
+            <div class="footer-c-item"><span class="footer-c-icon"><i data-lucide="phone"></i></span><a href="tel:6788006687">(678)-800-6687</a></div>
+            <div class="footer-c-item"><span class="footer-c-icon"><i data-lucide="map-pin"></i></span><span>Cumming, GA 30518</span></div>
+          </div>
+          <div class="footer-hours">
+            <strong>Business Hours</strong>
+            <p>Monday &#8211; Sunday</p>
+            <p>7:00 AM &#8211; 8:00 PM</p>
+          </div>
+          <div class="footer-cta">
+            <a href="quote.html" class="btn btn-primary">GET A QUOTE</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Privacy Policy (collapsible) -->
+  <div class="footer-privacy">
+    <div class="container">
+      <details>
+        <summary>Privacy &amp; Data Policy &#9660;</summary>
+        <div class="priv-body">
+          <p class="priv-h">Information We Collect</p>
+          <p>We may collect your name, phone number, email, address, and project details when you request an estimate, contact us by phone (including Ooma call services and recordings), or use our website.</p>
+          <p class="priv-h">How We Use Information</p>
+          <p>We use your information to provide estimates and customer support, schedule inspections, repairs, or installations, process payments, improve our services, and comply with legal requirements.</p>
+          <p class="priv-h">Call Recording &amp; Communication</p>
+          <p>Some calls through our Ooma system may be recorded for quality and training. Where required, we will notify you. By continuing the call, you consent to recording.</p>
+          <p class="priv-h">Sharing of Information</p>
+          <p>We do not sell or rent your data. We may share it with service providers (e.g., Ooma, JobNimbus), financing or insurance partners (with your consent), and legal authorities if required by law. No mobile information will be shared with third parties/affiliates for marketing/promotional purposes.</p>
+          <p class="priv-h">Data Protection</p>
+          <p>We use secure storage, encryption, and restricted access to protect your information. While we take precautions, no method is 100% secure.</p>
+          <p class="priv-h">Your Rights</p>
+          <p>You may request access, corrections, or deletion of your information, opt out of marketing, or withdraw consent for call recordings by contacting us at prodigyhomeimprove@gmail.com.</p>
+          <p class="priv-h">Retention &amp; Cookies</p>
+          <p>Our website may use standard cookies to improve your browsing experience. You may disable cookies in your browser settings.</p>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <!-- Bottom bar -->
+  <div class="footer-bot">
+    <div class="container">
+      <div class="footer-bot-inner">
+        <p class="footer-copy">&#169; 2026 PRODIGY HOME IMPROVEMENT LLC &nbsp; All rights reserved.</p>
+        <div class="footer-bot-links">
+          <a href="index.html#quote">Contact</a>
+          <a href="index.html#about">About</a>
+          <a href="index.html#testimonials">Reviews</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+/* ============================================================
+   STICKY HEADER
+============================================================ */
+const hdr = document.getElementById('site-header');
+window.addEventListener('scroll', () => {
+  hdr.classList.toggle('scrolled', window.scrollY > 50);
+}, { passive: true });
+
+/* ============================================================
+   MOBILE NAV
+============================================================ */
+const hamBtn   = document.getElementById('ham-btn');
+const mobNav   = document.getElementById('mob-nav');
+const mobClose = document.getElementById('mob-close');
+
+function openNav() {
+  mobNav.classList.add('open');
+  hamBtn.classList.add('open');
+  hamBtn.setAttribute('aria-expanded', 'true');
+  document.body.style.overflow = 'hidden';
+}
+function closeNav() {
+  mobNav.classList.remove('open');
+  hamBtn.classList.remove('open');
+  hamBtn.setAttribute('aria-expanded', 'false');
+  document.body.style.overflow = '';
+}
+
+hamBtn.addEventListener('click', openNav);
+mobClose.addEventListener('click', closeNav);
+mobNav.querySelectorAll('a').forEach(a => a.addEventListener('click', closeNav));
+
+/* ============================================================
+   WEBHOOKS
+============================================================ */
+const PARTIAL_FILL_URL = 'https://services.leadconnectorhq.com/hooks/kXQuV9NX2dbJg3UJFLzr/webhook-trigger/c3588964-388a-4041-9489-06ee720c407c';
+const FULL_LEAD_URL    = 'https://services.leadconnectorhq.com/hooks/kXQuV9NX2dbJg3UJFLzr/webhook-trigger/76da1284-2e8a-451b-b6dd-fe8f6859ed67';
+
+function sendPartialFill(data) {
+  try {
+    fetch(PARTIAL_FILL_URL, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(data)
+    }).catch(() => {});
+  } catch (e) {}
+}
+
+function sendFullLead(data) {
+  try {
+    fetch(FULL_LEAD_URL, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(data)
+    }).catch(() => {});
+  } catch (e) {}
+}
+
+/* ============================================================
+   FORM STATE
+============================================================ */
+let currentStep = 1;
+let formData = {
+  homeowner: '', service: '', role: '', budget: '', timeline: '',
+  firstName: '', lastName: '', phone: '', email: '',
+  address: '', city: '', state: '', zip: ''
+};
+let isResidential = true;
+let stepHistory = [1];
+
+/* ============================================================
+   VALIDATION
+============================================================ */
+function isValidName(name) {
+  const trimmed = name.trim();
+  if (trimmed.length < 2) return false;
+  return /^[A-Za-z\s'\-]+$/.test(trimmed);
+}
+
+function isValidEmail(email) {
+  const trimmed = email.trim().toLowerCase();
+  if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(trimmed)) return false;
+  const fakeDomains = ['test.com', 'fake.com', 'example.com', 'asdf.com', 'none.com', 'noemail.com', 'na.com'];
+  const domain = trimmed.split('@')[1];
+  if (fakeDomains.includes(domain)) return false;
+  const tld = domain.split('.').pop();
+  if (tld.length < 2) return false;
+  return true;
+}
+
+function isValidPhone(phone) {
+  const digits = phone.replace(/\D/g, '');
+  if (digits.length === 10) return true;
+  if (digits.length === 11 && digits[0] === '1') return true;
+  return false;
+}
+
+function isValidAddress(address) {
+  const trimmed = address.trim();
+  if (trimmed.length < 5) return false;
+  if (!/\d/.test(trimmed)) return false;
+  if (!/[A-Za-z]/.test(trimmed)) return false;
+  if (/^(.)\1+$/.test(trimmed.replace(/\s/g, ''))) return false;
+  return true;
+}
+
+function isValidCity(city) {
+  const trimmed = city.trim();
+  if (trimmed.length < 2) return false;
+  return /^[A-Za-z\s'\-\.]+$/.test(trimmed);
+}
+
+function isValidZip(zip) {
+  return /^\d{5}$/.test(zip.trim());
+}
+
+function showError(fieldId, show) {
+  const input = document.getElementById(fieldId);
+  const errMsg = document.getElementById('err-' + fieldId);
+  if (show) {
+    input.classList.add('error');
+    if (errMsg) errMsg.classList.add('visible');
+  } else {
+    input.classList.remove('error');
+    if (errMsg) errMsg.classList.remove('visible');
+  }
+}
+
+function clearAllErrors() {
+  document.querySelectorAll('.error').forEach(el => el.classList.remove('error'));
+  document.querySelectorAll('.error-msg').forEach(el => el.classList.remove('visible'));
+}
+
+/* ============================================================
+   PHONE FORMATTING
+============================================================ */
+document.addEventListener('DOMContentLoaded', function() {
+  const phoneInput = document.getElementById('phone');
+  phoneInput.addEventListener('input', function(e) {
+    let digits = e.target.value.replace(/\D/g, '');
+    if (digits.length > 10) digits = digits.substring(0, 10);
+    if (digits.length >= 7) {
+      e.target.value = '(' + digits.substring(0,3) + ') ' + digits.substring(3,6) + '-' + digits.substring(6);
+    } else if (digits.length >= 4) {
+      e.target.value = '(' + digits.substring(0,3) + ') ' + digits.substring(3);
+    } else if (digits.length > 0) {
+      e.target.value = '(' + digits;
+    }
+  });
+
+  document.querySelectorAll('input').forEach(input => {
+    input.addEventListener('focus', function() {
+      this.classList.remove('error');
+      const errMsg = document.getElementById('err-' + this.id);
+      if (errMsg) errMsg.classList.remove('visible');
+    });
+  });
+});
+
+/* ============================================================
+   STEP 1 SUBMIT
+============================================================ */
+function submitContactInfo() {
+  clearAllErrors();
+  let hasError = false;
+
+  const firstName = document.getElementById('firstName').value;
+  const lastName  = document.getElementById('lastName').value;
+  const phone     = document.getElementById('phone').value;
+  const email     = document.getElementById('email').value;
+  const address   = document.getElementById('address').value;
+  const city      = document.getElementById('city').value;
+  const zip       = document.getElementById('zip').value;
+
+  if (!isValidName(firstName))  { showError('firstName', true); hasError = true; }
+  if (!isValidName(lastName))   { showError('lastName', true);  hasError = true; }
+  if (!isValidPhone(phone))     { showError('phone', true);     hasError = true; }
+  if (!isValidEmail(email))     { showError('email', true);     hasError = true; }
+  if (!isValidAddress(address)) { showError('address', true);   hasError = true; }
+  if (!isValidCity(city))       { showError('city', true);      hasError = true; }
+  if (!isValidZip(zip))         { showError('zip', true);       hasError = true; }
+
+  if (hasError) return;
+
+  formData.firstName = firstName.trim();
+  formData.lastName  = lastName.trim();
+  formData.phone     = phone.trim();
+  formData.email     = email.trim().toLowerCase();
+  formData.address   = address.trim();
+  formData.city      = city.trim();
+  formData.state     = document.getElementById('state').value.trim().toUpperCase();
+  formData.zip       = zip.trim();
+
+  sendPartialFill({
+    firstName: formData.firstName,
+    lastName:  formData.lastName,
+    email:     formData.email,
+    phone:     formData.phone,
+    address:   formData.address,
+    city:      formData.city,
+    state:     formData.state,
+    zip:       formData.zip
+  });
+
+  goToStep(2);
+}
+
+/* ============================================================
+   OPTION SELECTION
+============================================================ */
+function selectOption(el, field, value) {
+  formData[field] = value;
+
+  const cards = el.parentElement.querySelectorAll('.option-card');
+  cards.forEach(c => c.classList.remove('selected'));
+  el.classList.add('selected');
+
+  if (el.dataset.auto === 'true') {
+    setTimeout(() => {
+      if (currentStep === 2) {
+        isResidential = value === 'Yes';
+        goToStep(isResidential ? '3a' : '3b');
+      } else if (currentStep === '3a' || currentStep === '3b') {
+        goToStep(4);
+      } else if (currentStep === 4) {
+        goToStep(5);
+      } else if (currentStep === 5) {
+        sendFullLead({
+          firstName: formData.firstName,
+          lastName:  formData.lastName,
+          email:     formData.email,
+          phone:     formData.phone,
+          address:   formData.address,
+          city:      formData.city,
+          state:     formData.state,
+          zip:       formData.zip,
+          homeowner: formData.homeowner,
+          service:   isResidential ? formData.service : '',
+          role:      isResidential ? '' : formData.role,
+          budget:    formData.budget,
+          timeline:  formData.timeline
+        });
+        goToStep('thanks');
+      }
+    }, 250);
+  }
+}
+
+/* ============================================================
+   NAVIGATION
+============================================================ */
+function goToStep(step) {
+  document.querySelectorAll('.step').forEach(s => s.classList.remove('active'));
+
+  let stepEl;
+  if (step === '3a') {
+    stepEl = document.getElementById('step-3a');
+  } else if (step === '3b') {
+    stepEl = document.getElementById('step-3b');
+  } else if (step === 4) {
+    stepEl = document.getElementById('step-4');
+    document.getElementById('budget-residential').style.display = isResidential ? 'grid' : 'none';
+    document.getElementById('budget-commercial').style.display  = isResidential ? 'none' : 'grid';
+  } else if (step === 'thanks') {
+    stepEl = document.getElementById('step-thanks');
+    document.getElementById('trust-badges').style.display = 'none';
+  } else {
+    stepEl = document.getElementById('step-' + step);
+  }
+
+  if (stepEl) stepEl.classList.add('active');
+  stepHistory.push(step);
+  currentStep = step;
+  updateProgress(step);
+}
+
+function goBack() {
+  if (stepHistory.length > 1) {
+    stepHistory.pop();
+    const prevStep = stepHistory[stepHistory.length - 1];
+    currentStep = prevStep;
+
+    document.querySelectorAll('.step').forEach(s => s.classList.remove('active'));
+
+    let stepEl;
+    if (prevStep === '3a') {
+      stepEl = document.getElementById('step-3a');
+    } else if (prevStep === '3b') {
+      stepEl = document.getElementById('step-3b');
+    } else {
+      stepEl = document.getElementById('step-' + prevStep);
+    }
+
+    if (stepEl) stepEl.classList.add('active');
+    updateProgress(prevStep);
+  }
+}
+
+function updateProgress(step) {
+  const stepMap = { 1: 1, 2: 2, '3a': 3, '3b': 3, 4: 4, 5: 5, 'thanks': 5 };
+  const stepNum = stepMap[step] || 1;
+
+  for (let i = 1; i <= 5; i++) {
+    const el = document.getElementById('prog-' + i);
+    el.classList.remove('active', 'completed');
+    if (i < stepNum) el.classList.add('completed');
+    if (i === stepNum) el.classList.add('active');
+  }
+
+  const indicator = document.getElementById('step-indicator');
+  if (step === 'thanks') {
+    indicator.textContent = 'Complete';
+  } else {
+    indicator.textContent = 'Step ' + stepNum + ' of 5';
+  }
+}
+
+/* Init Lucide icons */
+lucide.createIcons();
+</script>
+
+</body>
+</html>
