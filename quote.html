@@ -426,16 +426,44 @@ p { font-family: var(--font-p); }
 
 .btn-back:hover { color: rgba(255,255,255,0.7); }
 
-/* Consent */
-.consent-text {
-  font-size: 11px;
-  color: rgba(255,255,255,0.35);
-  line-height: 1.5;
+/* SMS Consent Checkbox */
+.sms-consent-wrap {
   margin-top: 16px;
-  padding: 12px;
+  padding: 14px;
   background: rgba(179, 134, 0, 0.05);
   border-left: 2px solid rgba(179, 134, 0, 0.3);
   border-radius: 0 6px 6px 0;
+}
+.sms-consent-label {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  cursor: pointer;
+}
+.sms-consent-label input[type="checkbox"] {
+  margin-top: 3px;
+  flex-shrink: 0;
+  width: 15px;
+  height: 15px;
+  accent-color: #B38600;
+  cursor: pointer;
+}
+.sms-consent-label span {
+  font-size: 11px;
+  color: rgba(255,255,255,0.5);
+  line-height: 1.6;
+  font-family: 'Inter', sans-serif;
+}
+.sms-consent-label a {
+  color: #B38600;
+  text-decoration: underline;
+}
+.sms-consent-label a:hover { color: #d4a017; }
+.sms-consent-error {
+  display: none;
+  font-size: 11px;
+  color: #ff6b6b;
+  margin-top: 6px;
   font-family: 'Inter', sans-serif;
 }
 
@@ -760,8 +788,12 @@ p { font-family: var(--font-p); }
           </div>
         </div>
 
-        <div class="consent-text">
-          By submitting this form, you consent to be contacted by Prodigy Home Improvement LLC via phone, email, or SMS regarding your inquiry. Standard message and data rates may apply. Some calls may be recorded through our Ooma system for quality assurance. No mobile information will be shared with third parties for marketing purposes. Reply STOP to opt out.
+        <div class="sms-consent-wrap">
+          <label class="sms-consent-label">
+            <input type="checkbox" id="sms-consent" />
+            <span>I agree to receive SMS messages from Prodigy Home Improvement LLC at the phone number provided about my inquiry. Message frequency varies. Msg &amp; data rates may apply. Reply STOP to unsubscribe, HELP for help. Consent is not a condition of purchase. <a href="privacy-policy.html" target="_blank" rel="noopener noreferrer">View our Privacy Policy</a>.</span>
+          </label>
+          <div class="sms-consent-error" id="err-sms-consent">Please agree to our SMS terms to continue.</div>
         </div>
 
         <button class="btn-primary-form" onclick="submitContactInfo()">Continue</button>
@@ -964,7 +996,7 @@ p { font-family: var(--font-p); }
           <div class="footer-c-items">
             <div class="footer-c-item"><span class="footer-c-icon"><i data-lucide="mail"></i></span><a href="mailto:prodigyhomeimprove@gmail.com">prodigyhomeimprove@gmail.com</a></div>
             <div class="footer-c-item"><span class="footer-c-icon"><i data-lucide="phone"></i></span><a href="tel:6788006687">(678)-800-6687</a></div>
-            <div class="footer-c-item"><span class="footer-c-icon"><i data-lucide="map-pin"></i></span><span>Cumming, GA 30518</span></div>
+            <div class="footer-c-item"><span class="footer-c-icon"><i data-lucide="map-pin"></i></span><span>5755 Princeton Oaks Dr, Sugar Hill, GA 30518</span></div>
           </div>
           <div class="footer-hours">
             <strong>Business Hours</strong>
@@ -979,28 +1011,11 @@ p { font-family: var(--font-p); }
     </div>
   </div>
 
-  <!-- Privacy Policy (collapsible) -->
+  <!-- SMS Disclosure & Privacy Link -->
   <div class="footer-privacy">
     <div class="container">
-      <details>
-        <summary>Privacy &amp; Data Policy &#9660;</summary>
-        <div class="priv-body">
-          <p class="priv-h">Information We Collect</p>
-          <p>We may collect your name, phone number, email, address, and project details when you request an estimate, contact us by phone (including Ooma call services and recordings), or use our website.</p>
-          <p class="priv-h">How We Use Information</p>
-          <p>We use your information to provide estimates and customer support, schedule inspections, repairs, or installations, process payments, improve our services, and comply with legal requirements.</p>
-          <p class="priv-h">Call Recording &amp; Communication</p>
-          <p>Some calls through our Ooma system may be recorded for quality and training. Where required, we will notify you. By continuing the call, you consent to recording.</p>
-          <p class="priv-h">Sharing of Information</p>
-          <p>We do not sell or rent your data. We may share it with service providers (e.g., Ooma, JobNimbus), financing or insurance partners (with your consent), and legal authorities if required by law. No mobile information will be shared with third parties/affiliates for marketing/promotional purposes.</p>
-          <p class="priv-h">Data Protection</p>
-          <p>We use secure storage, encryption, and restricted access to protect your information. While we take precautions, no method is 100% secure.</p>
-          <p class="priv-h">Your Rights</p>
-          <p>You may request access, corrections, or deletion of your information, opt out of marketing, or withdraw consent for call recordings by contacting us at prodigyhomeimprove@gmail.com.</p>
-          <p class="priv-h">Retention &amp; Cookies</p>
-          <p>Our website may use standard cookies to improve your browsing experience. You may disable cookies in your browser settings.</p>
-        </div>
-      </details>
+      <p style="font-size:0.75rem;color:rgba(255,255,255,0.32);line-height:1.7;max-width:900px;">By contacting us or submitting a form on this site, you agree to receive SMS messages from Prodigy Home Improvement LLC, 5755 Princeton Oaks Dr, Sugar Hill, GA 30518. Message frequency varies. Msg &amp; data rates may apply. Reply STOP to opt out at any time. This is not a condition of purchase.</p>
+      <p style="margin-top:6px;font-size:0.75rem;"><a href="privacy-policy.html" style="color:rgba(255,255,255,0.45);text-decoration:underline;">Privacy Policy</a></p>
     </div>
   </div>
 
@@ -1201,6 +1216,15 @@ function submitContactInfo() {
   if (!isValidAddress(address)) { showError('address', true);   hasError = true; }
   if (!isValidCity(city))       { showError('city', true);      hasError = true; }
   if (!isValidZip(zip))         { showError('zip', true);       hasError = true; }
+
+  const smsConsent = document.getElementById('sms-consent');
+  const smsConsentErr = document.getElementById('err-sms-consent');
+  if (!smsConsent.checked) {
+    smsConsentErr.style.display = 'block';
+    hasError = true;
+  } else {
+    smsConsentErr.style.display = 'none';
+  }
 
   if (hasError) return;
 
