@@ -790,11 +790,19 @@ p { font-family: var(--font-p); }
 
         <div class="sms-consent-wrap">
           <label class="sms-consent-label">
-            <input type="checkbox" id="sms-consent" />
-            <span>I agree to receive SMS messages from Prodigy Home Improvement LLC at the phone number provided about my inquiry. Message frequency varies. Msg &amp; data rates may apply. Reply STOP to unsubscribe, HELP for help. Consent is not a condition of purchase. <a href="privacy-policy.html" target="_blank" rel="noopener noreferrer">View our Privacy Policy</a>.</span>
+            <input type="checkbox" id="sms-marketing-consent" />
+            <span>I agree to receive <strong style="color:rgba(255,255,255,0.75);">marketing SMS messages</strong> from Prodigy Home Improvement LLC, including special offers, promotions, and discounts. Message frequency varies. Msg &amp; data rates may apply. Reply STOP to unsubscribe. (Optional)</span>
           </label>
-          <div class="sms-consent-error" id="err-sms-consent">Please agree to our SMS terms to continue.</div>
         </div>
+
+        <div class="sms-consent-wrap" style="margin-top:10px;">
+          <label class="sms-consent-label">
+            <input type="checkbox" id="sms-nonmarketing-consent" />
+            <span>I agree to receive <strong style="color:rgba(255,255,255,0.75);">transactional SMS messages</strong> from Prodigy Home Improvement LLC, including appointment reminders, estimate confirmations, and project updates. Message frequency varies. Msg &amp; data rates may apply. Reply STOP to unsubscribe. (Optional)</span>
+          </label>
+        </div>
+
+        <p style="font-size:11px;color:rgba(255,255,255,0.35);margin-top:12px;font-family:'Inter',sans-serif;line-height:1.6;">By submitting this form, you agree to our <a href="privacy-policy.html" target="_blank" rel="noopener noreferrer" style="color:#B38600;text-decoration:underline;">Privacy Policy</a> and <a href="terms-of-service.html" target="_blank" rel="noopener noreferrer" style="color:#B38600;text-decoration:underline;">Terms of Service</a>.</p>
 
         <button class="btn-primary-form" onclick="submitContactInfo()">Continue</button>
       </div>
@@ -1015,7 +1023,7 @@ p { font-family: var(--font-p); }
   <div class="footer-privacy">
     <div class="container">
       <p style="font-size:0.75rem;color:rgba(255,255,255,0.32);line-height:1.7;max-width:900px;">By contacting us or submitting a form on this site, you agree to receive SMS messages from Prodigy Home Improvement LLC, 5755 Princeton Oaks Dr, Sugar Hill, GA 30518. Message frequency varies. Msg &amp; data rates may apply. Reply STOP to opt out at any time. This is not a condition of purchase.</p>
-      <p style="margin-top:6px;font-size:0.75rem;"><a href="privacy-policy.html" style="color:rgba(255,255,255,0.45);text-decoration:underline;">Privacy Policy</a></p>
+      <p style="margin-top:6px;font-size:0.75rem;"><a href="privacy-policy.html" style="color:rgba(255,255,255,0.45);text-decoration:underline;">Privacy Policy</a> | <a href="terms-of-service.html" style="color:rgba(255,255,255,0.45);text-decoration:underline;">Terms of Service</a></p>
     </div>
   </div>
 
@@ -1104,7 +1112,8 @@ let currentStep = 1;
 let formData = {
   homeowner: '', service: '', role: '', budget: '', timeline: '',
   firstName: '', lastName: '', phone: '', email: '',
-  address: '', city: '', state: '', zip: ''
+  address: '', city: '', state: '', zip: '',
+  marketingConsent: false, nonMarketingConsent: false
 };
 let isResidential = true;
 let stepHistory = [1];
@@ -1221,15 +1230,6 @@ function submitContactInfo() {
   if (!isValidCity(city))       { showError('city', true);      hasError = true; }
   if (!isValidZip(zip))         { showError('zip', true);       hasError = true; }
 
-  const smsConsent = document.getElementById('sms-consent');
-  const smsConsentErr = document.getElementById('err-sms-consent');
-  if (!smsConsent.checked) {
-    smsConsentErr.style.display = 'block';
-    hasError = true;
-  } else {
-    smsConsentErr.style.display = 'none';
-  }
-
   if (hasError) return;
 
   formData.firstName = firstName.trim();
@@ -1240,16 +1240,20 @@ function submitContactInfo() {
   formData.city      = city.trim();
   formData.state     = document.getElementById('state').value.trim().toUpperCase();
   formData.zip       = zip.trim();
+  formData.marketingConsent    = document.getElementById('sms-marketing-consent').checked;
+  formData.nonMarketingConsent = document.getElementById('sms-nonmarketing-consent').checked;
 
   sendPartialFill({
-    firstName: formData.firstName,
-    lastName:  formData.lastName,
-    email:     formData.email,
-    phone:     formData.phone,
-    address:   formData.address,
-    city:      formData.city,
-    state:     formData.state,
-    zip:       formData.zip,
+    firstName:           formData.firstName,
+    lastName:            formData.lastName,
+    email:               formData.email,
+    phone:               formData.phone,
+    address:             formData.address,
+    city:                formData.city,
+    state:               formData.state,
+    zip:                 formData.zip,
+    marketingConsent:    formData.marketingConsent,
+    nonMarketingConsent: formData.nonMarketingConsent,
     fbclid,
     fbc,
     fbp
@@ -1279,19 +1283,21 @@ function selectOption(el, field, value) {
         goToStep(5);
       } else if (currentStep === 5) {
         sendFullLead({
-          firstName: formData.firstName,
-          lastName:  formData.lastName,
-          email:     formData.email,
-          phone:     formData.phone,
-          address:   formData.address,
-          city:      formData.city,
-          state:     formData.state,
-          zip:       formData.zip,
-          homeowner: formData.homeowner,
-          service:   isResidential ? formData.service : '',
-          role:      isResidential ? '' : formData.role,
-          budget:    formData.budget,
-          timeline:  formData.timeline,
+          firstName:           formData.firstName,
+          lastName:            formData.lastName,
+          email:               formData.email,
+          phone:               formData.phone,
+          address:             formData.address,
+          city:                formData.city,
+          state:               formData.state,
+          zip:                 formData.zip,
+          homeowner:           formData.homeowner,
+          service:             isResidential ? formData.service : '',
+          role:                isResidential ? '' : formData.role,
+          budget:              formData.budget,
+          timeline:            formData.timeline,
+          marketingConsent:    formData.marketingConsent,
+          nonMarketingConsent: formData.nonMarketingConsent,
           fbclid,
           fbc,
           fbp
