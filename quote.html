@@ -1227,6 +1227,10 @@ function submitContactInfo() {
     fbp
   });
 
+  if (typeof fbq === 'function') {
+    fbq('track', 'Lead', { value: 500, currency: 'USD', content_name: 'Roofing Quote Form - Page 1' });
+  }
+
   goToStep(2);
 }
 
