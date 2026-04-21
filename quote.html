@@ -798,10 +798,10 @@ p { font-family: var(--font-p); }
         <p class="step-question">Do you own a home in North Metro Atlanta?</p>
         <p class="step-subtext">This helps us serve you better</p>
         <div class="options-grid two-col">
-          <div class="option-card" onclick="selectOption(this, 'homeowner', 'Yes')" data-auto="true">
+          <div class="option-card" onclick="selectOption(this, 'homeowner', 'Yes, I\'m a homeowner')" data-auto="true">
             <span class="option-label">Yes, I'm a homeowner</span>
           </div>
-          <div class="option-card" onclick="selectOption(this, 'homeowner', 'No')" data-auto="true">
+          <div class="option-card" onclick="selectOption(this, 'homeowner', 'No, I am not a homeowner')" data-auto="true">
             <span class="option-label">No, I am not a homeowner</span>
           </div>
         </div>
@@ -817,7 +817,7 @@ p { font-family: var(--font-p); }
             <span class="option-label">Roofing</span>
             <span class="option-sublabel">Repair or replacement</span>
           </div>
-          <div class="option-card" onclick="selectOption(this, 'service', 'Kitchen or bathroom remodel')" data-auto="true">
+          <div class="option-card" onclick="selectOption(this, 'service', 'Kitchen / Bath Remodel')" data-auto="true">
             <span class="option-label">Kitchen / Bath</span>
             <span class="option-sublabel">Remodel</span>
           </div>
@@ -825,15 +825,15 @@ p { font-family: var(--font-p); }
             <span class="option-label">Exterior</span>
             <span class="option-sublabel">Siding, gutters, paint</span>
           </div>
-          <div class="option-card" onclick="selectOption(this, 'service', 'Home addition or expansion')" data-auto="true">
+          <div class="option-card" onclick="selectOption(this, 'service', 'Home Addition / Expansion')" data-auto="true">
             <span class="option-label">Addition</span>
             <span class="option-sublabel">Home expansion</span>
           </div>
-          <div class="option-card" onclick="selectOption(this, 'service', 'Landscaping and outdoor spaces')" data-auto="true">
+          <div class="option-card" onclick="selectOption(this, 'service', 'Landscaping / Outdoor Spaces')" data-auto="true">
             <span class="option-label">Landscaping</span>
             <span class="option-sublabel">Outdoor spaces</span>
           </div>
-          <div class="option-card" onclick="selectOption(this, 'service', 'Multiple projects')" data-auto="true">
+          <div class="option-card" onclick="selectOption(this, 'service', 'Multiple Projects')" data-auto="true">
             <span class="option-label">Multiple Projects</span>
             <span class="option-sublabel">Several services needed</span>
           </div>
@@ -1247,7 +1247,7 @@ function selectOption(el, field, value) {
   if (el.dataset.auto === 'true') {
     setTimeout(() => {
       if (currentStep === 2) {
-        isResidential = value === 'Yes';
+        isResidential = value === "Yes, I'm a homeowner";
         goToStep(isResidential ? '3a' : '3b');
       } else if (currentStep === '3a' || currentStep === '3b') {
         goToStep(4);
