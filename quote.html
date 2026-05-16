@@ -788,7 +788,7 @@ p { font-family: var(--font-p); }
             <label>Phone *</label>
             <div class="phone-input-wrap" id="phone-wrap">
               <span class="phone-prefix">+1</span>
-              <input type="tel" id="phone" placeholder="(678) 000-0000" maxlength="14" autocomplete="off" readonly onfocus="this.removeAttribute('readonly')">
+              <input type="tel" id="phone" placeholder="6788006687" maxlength="11" autocomplete="off" readonly onfocus="this.removeAttribute('readonly')">
             </div>
             <div class="error-msg" id="err-phone">Enter a valid 10-digit phone number</div>
           </div>
@@ -1157,13 +1157,12 @@ function isValidEmail(email) {
 }
 
 function normalizePhoneDigits(val) {
-  let d = (val || '').replace(/\D/g, '');
-  if (d.length === 11 && d[0] === '1') d = d.slice(1);
-  return d.slice(0, 10);
+  return (val || '').replace(/\D/g, '').slice(0, 11);
 }
 
 function isValidPhone(phone) {
-  return normalizePhoneDigits(phone).length === 10;
+  const len = normalizePhoneDigits(phone).length;
+  return len >= 10 && len <= 11;
 }
 
 function isValidAddress(address) {
@@ -1202,11 +1201,7 @@ document.addEventListener('DOMContentLoaded', function() {
   let autofillTimer;
 
   function applyPhoneFormat(input) {
-    const d = normalizePhoneDigits(input.value);
-    if (d.length >= 7)      input.value = '(' + d.slice(0,3) + ') ' + d.slice(3,6) + '-' + d.slice(6);
-    else if (d.length >= 4) input.value = '(' + d.slice(0,3) + ') ' + d.slice(3);
-    else if (d.length > 0)  input.value = '(' + d;
-    else                    input.value = '';
+    input.value = normalizePhoneDigits(input.value);
   }
 
   phoneInput.addEventListener('input', function() {
@@ -1250,7 +1245,7 @@ function submitContactInfo() {
 
   formData.firstName = firstName.trim();
   formData.lastName  = lastName.trim();
-  formData.phone = '+1 ' + phone.trim();
+  formData.phone = '+1' + normalizePhoneDigits(phone);
   formData.email     = email.trim().toLowerCase();
   formData.address   = address.trim();
   formData.marketingConsent    = document.getElementById('sms-marketing-consent').checked;
