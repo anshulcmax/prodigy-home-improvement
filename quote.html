@@ -1245,7 +1245,9 @@ function submitContactInfo() {
 
   formData.firstName = firstName.trim();
   formData.lastName  = lastName.trim();
-  formData.phone = '+1' + normalizePhoneDigits(phone);
+  const _digits = normalizePhoneDigits(phone);
+  const _tenDigit = (_digits.length === 11 && _digits[0] === '1') ? _digits.slice(1) : _digits;
+  formData.phone = '+1' + _tenDigit;
   formData.email     = email.trim().toLowerCase();
   formData.address   = address.trim();
   formData.marketingConsent    = document.getElementById('sms-marketing-consent').checked;
