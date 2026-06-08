@@ -1097,7 +1097,7 @@ mobNav.querySelectorAll('a').forEach(a => a.addEventListener('click', closeNav))
    WEBHOOKS
 ============================================================ */
 const PARTIAL_FILL_URL = 'https://services.leadconnectorhq.com/hooks/kXQuV9NX2dbJg3UJFLzr/webhook-trigger/c3588964-388a-4041-9489-06ee720c407c';
-const FULL_LEAD_URL    = 'https://services.leadconnectorhq.com/hooks/kXQuV9NX2dbJg3UJFLzr/webhook-trigger/76da1284-2e8a-451b-b6dd-fe8f6859ed67';
+const FULL_LEAD_URL    = 'https://services.leadconnectorhq.com/hooks/kXQuV9NX2dbJg3UJFLzr/webhook-trigger/c3588964-388a-4041-9489-06ee720c407c';
 
 const fbclid = new URLSearchParams(window.location.search).get('fbclid') || '';
 const fbc    = (document.cookie.match(/(?:^|;\s*)_fbc=([^;]*)/) || [])[1] || '';
@@ -1286,7 +1286,7 @@ function selectOption(el, field, value) {
   if (el.dataset.auto === 'true') {
     setTimeout(() => {
       if (currentStep === 2) {
-        isResidential = value === "Yes, I'm a homeowner";
+        isResidential = value === 'yes_im_a_homeowner';
         goToStep(isResidential ? '3a' : '3b');
       } else if (currentStep === '3a' || currentStep === '3b') {
         goToStep(4);
